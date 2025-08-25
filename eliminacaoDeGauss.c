@@ -16,11 +16,11 @@ void gaussEliminacaoPivotamento(int ordem, double **A, double *B, double *x){
 
         // Trocar linhas k e max se necessário
         if(max != k){
-            float *tempLinha = A[k];
+            double *tempLinha = A[k];
             A[k] = A[max];
             A[max] = tempLinha;
 
-            float tempB = B[k];
+            double tempB = B[k];
             B[k] = B[max];
             B[max] = tempB;
         }
@@ -31,7 +31,7 @@ void gaussEliminacaoPivotamento(int ordem, double **A, double *B, double *x){
                 printf("Erro: Divisão por zero detectada após pivotamento!\n");
                 exit(1);
             }
-            float fator = A[i][k] / A[k][k];
+            double fator = A[i][k] / A[k][k];
             for(int j = k; j < ordem; j++){
                 A[i][j] -= fator * A[k][j];
             }
@@ -41,7 +41,7 @@ void gaussEliminacaoPivotamento(int ordem, double **A, double *B, double *x){
 
     // Substituição regressiva
     for(int i = ordem - 1; i >= 0; i--){
-        float soma = 0.0;
+        double soma = 0.0;
         for(int j = i + 1; j < ordem; j++){
             soma += A[i][j] * x[j];
         }
