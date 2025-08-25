@@ -1,0 +1,7 @@
+Componentes do grupo: André Destefani Stefanato, Fabrício Lopes Lima do Amaral e Maria Clara Gueler Feitani
+
+Para descobrir qual é a idade em questão (específica para esse problema) basta executar o makefile feito para o windows.
+Comando para compilar: mingw32-make 
+Comando para executar: prog.exe
+
+:)
